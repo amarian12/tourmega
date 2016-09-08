@@ -1,0 +1,12 @@
+= render 'profile_navbar'
+
+#profile
+  = render 'users/verifications/id' if false
+  #panel-verifications
+    = render 'users/verifications/panel'
+
+:javascript
+  $(function(){
+    $('.content-column').removeClass('free-meals');
+    $('li.profile>a').addClass('current');
+  });

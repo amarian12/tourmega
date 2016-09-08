@@ -1,0 +1,10 @@
+#how-it-works{style: 'padding: 0px; margin-bottom:-20px'}
+  .row.wide{"data-equalizer" => ""}
+    .small-12.medium-7.large-6.columns.content.shorter.large-stacked{"data-equalizer-watch" => "", :style => "height: 698px;"}
+      .row
+        .small-12.columns.space-top
+          - t('home.howitworks.step').each do |index, step|
+            .row{style: 'padding: 20px 0'}
+              .step-circle.tiny{style: 'margin: 5px'}= index + 1
+              = step
+    .small-12.medium-5.large-6.columns.picture{ style: "height: 698px; background-image: url(/assets/HowItWorks1.jpg); background-size: cover; background-position: 50% 80%; background-repeat: no-repeat;" }

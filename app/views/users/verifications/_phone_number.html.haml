@@ -1,0 +1,21 @@
+%li.space-4
+  - if current_user.send("phone_number_verified?")
+    .row
+      .col-xs-12.col-sm-7
+        %label Phone number
+        %input{:type => "text", value: current_user.phone_number, disabled: 'disabled'}/
+      .col-xs-12.col-sm-5
+        .text-center.green-succ
+          .item
+            %i.icon.fa.fa-check-circle-o
+            .item-body
+              %span= "Verified"
+  - else
+    %h5 Please enter your phone number
+    .row
+      = simple_form_for(current_user, url: twilio_send_message_users_path, method: :post, remote: true, html: { class: 'ng-pristine ng-valid', id: 'twilio-verify-form' }) do |f|
+        .col-xs-12.col-sm-7
+          = f.input :phone_number, input_html: { placeholder: '(+ Nation-Code) xxxxxxxxx'}, label: false, required: true
+        .col-xs-12.col-sm-5
+          .text-center
+            = f.button :button, 'Verify', class: 'button expand ladda-button', 'data-style' => 'slide-right', 'data-color' => 'mint'

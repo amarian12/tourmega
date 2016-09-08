@@ -1,0 +1,22 @@
+.panel.panel-has-header.white-bg
+  .panel-header Your Current Verifications
+  .panel-body
+    - if current_user.verified?
+      %h4.green-succ Verified guide
+    - elsif current_user.partial_verified?
+      %h4.green-succ Partial verified guide
+    - else
+      %h4.red You need verify yourself via at least 2 channels
+    - if current_user.partial_verified?
+      .row
+        .small-12.medium-7.columns
+          %p
+            Now you can post your own tour and become a tour guide on TourMega.
+        .small-12.medium-5.columns
+          = link_to "Post Your Tour", new_tour_path, class: 'button expand ladda-button', 'data-style' => 'slide-right', 'data-color' => 'mint'
+    %br/
+    %ul.list-unstyled
+      #phone-number-verification
+        = render 'users/verifications/phone_number'
+      #social-verification
+        = render 'users/verifications/social'

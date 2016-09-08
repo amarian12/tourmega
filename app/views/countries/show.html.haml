@@ -1,0 +1,58 @@
+- content_for(:title, "#{@country.name} with TourMega")
+= javascript_include_tag 'gmap_tour_location'
+= javascript_include_tag 'gmap_search'
+%section#home.main-section
+  #country-level-page
+    #hero.countries{"background-image" => "#{@country.default_scene_image_url}", "background-position" => "50% 10%"}
+      .message
+        .row
+          .small-12.small-centered.medium-10.large-8.columns.text-center
+            %h1.larger= "Explore #{@country.name}"
+            = render 'shared/search_bar_with_city_and_country', country: @country
+    .white-bg
+      .row.wide
+        .small-12.small-centered.medium-8.columns.text-center.guide.content.short
+          %h3= "Travel Experiences in #{@country.name}"
+          = I18n.t("countries.#{@country.slug}.description").html_safe
+    %section.main-section
+      #host-selection-page
+        #hero
+          .row.wide.collapse.map-container.map-country
+            #map-place-address{ style: 'width: 75%;', address: "#{@country.name}", lat: "#{@country.lat}", lng: "#{@country.lng}", place: 'country' }
+          .toolbox.transparent.results-country
+            .row.wide.light-grey-bg.header
+              .small-12.columns
+                %h5= search_place
+            .row.space-bottom
+              #filter-form.small-12.columns
+                = render 'search/search_filter_category'
+                = render 'search/search_filter_price'
+            .row.light-grey-bg
+            #tours
+              - if @tours.present?
+                .footer-results.small-12.column
+                  = paginate @tours, remote: true
+                .listings-container
+                  .row
+                    - @tours.each do |tour|
+                      = render 'search/tour', tour: tour
+
+                .footer-results.small-12.column
+                  = paginate @tours, remote: true
+            #map-popup-items
+
+= include_gmap('initCountryOrCityMap')
+- if false
+  - if @cuisines.present?
+    = render 'shared/cuisines', cuisines: @cuisines
+
+:javascript
+  $('#map-popup-items').html("#{j render 'search/map_popup_items', tours: @tours}");
+  setTimeout(function(){
+    drawMarkersForCountry(#{raw @tours_serialized.to_json});
+  },2000);
+  $(document).ready(function(){
+    var results_height = $('.results-country').height();
+    $('#map-place-address').height(results_height + 20);
+    google.maps.event.trigger(tourMap, "resize");
+  });

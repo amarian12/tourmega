@@ -1,0 +1,110 @@
+- content_for(:title, "Design a tour with us")
+= javascript_include_tag 'gmap_autocomplete'
+- @url = tour.new_record? ? tours_path : update_profile_tour_path(tour)
+
+.row
+  .small-12.columns
+    .headline.text-center
+      %h1.h3 Let’s create an awesome tour together!
+      %h5 Tell us about your tour or activity.
+      %a.js--tour-requirements{href: "#"} Tour Profile Requirements
+    .step-panel
+      = simple_form_for(tour, url: @url, html: { class: 'new_tour' }) do |f|
+        .panel-container
+          .field.row.display-table
+            .medium-7.columns.table-cell
+              %label Tour title
+              .input-box
+                = f.input :name, label: false, input_html: { placeholder: 'Name your tour', minlength: 20 }
+            .medium-5.columns.field-guide.table-cell.space-3
+              %p Titles should be catchy and highlight main experience but as short as possible.
+
+          .field.row.display-table
+            .medium-7.columns.table-cell
+              %label Meeting place
+              .input-box
+                = f.input :locate_pickup_address, as: :fake, input_html: { placeholder: 'Type locations', class: 'autocomplete-location', autocomplete: 'off', 'fill-to-input' => 'tour_pickup_address', value: f.object.pickup_address.try(:address) }, label: false, required: true
+                = f.input :pickup_address, as: :fake, input_html: { name: 'tour[pickup_address]', id: 'tour_pickup_address', class: 'hidden', value: f.object.pickup_address.try(:hash_attributes) }, label: false, wrapper: false, required: false
+            .medium-5.columns.field-guide.table-cell.space-3
+              %p Add the location where you will meet travelers or where they can be picked up
+
+          .field.row.display-table
+            .medium-7.columns.table-cell
+              %label Tour location
+              .input-box
+                = f.input :locate_location, as: :fake, input_html: { placeholder: 'Type the location of where the tour will take place', class: 'autocomplete-location', autocomplete: 'off', 'fill-to-input' => 'tour_location', value: f.object.location.try(:address) }, label: false
+                = f.input :location, as: :fake, input_html: { name: 'tour[location]', id: 'tour_location', class: 'hidden', value: f.object.location.try(:hash_attributes) }, label: false, wrapper: false, required: false
+            .medium-5.columns.field-guide.table-cell.space-3
+              %p The more detailed location info the better
+
+          .field.row
+            .medium-12.column
+              %label
+                Select Tour Category/Type (you may select more than one)
+              %p.field-desc
+              .categories.select-icons
+                #category_ids.hidden
+                  - tour.categories.each do |category|
+                    %input{type: "text", name: 'tour[category_ids][]', value: category.id}/
+                %ul.id_categories.small-block-grid-3.medium-block-grid-3.large-block-grid-10
+                  - Category.find_each do |category|
+                    %li
+                      %div.icon-category{:class => ('active' if tour.categories.include?(category)), name: category.id}
+                        %img{src: category.icon.url }
+                      %label= category.name.titleize
+        .row
+          .small-12.medium-4.medium-push-8.columns.text-right
+            = f.button :submit, 'Save and Preview', class: 'button ladda-button', 'data-style' => 'expand-right', 'data-color' => 'mint'
+
+
+= include_gmap('initAutocomplete')
+
+:javascript
+  $(function(){
+    $('form').keydown(function (e) {
+      if (e.which == 13)
+        return false;
+    });
+
+    $('.icon-category').on('click', function(){
+      var $this = $(this);
+      if ($this.hasClass('active')) {
+        $this.removeClass('active');
+      }
+      else{
+        $this.addClass('active');
+      }
+      updateCategoryIds($this.attr('name'));
+    });
+  });
+
+  function updateCategoryIds(category_id){
+    $element = $('#category_ids');
+    if ($element.find("input[value='" + category_id + "']").length > 0) {
+      $element.find("input[value='" + category_id + "']").remove();
+    }
+    else {
+      $element.append("<input type='text' name='tour[category_ids][]' value='" + category_id + "'>");
+    }
+  }
+
+  $('form').on('submit', function(e){
+    if ($('#category_ids').children().length == 0){
+      sweetAlert('You need to choose at least a category.');
+      Ladda.stopAll();
+      e.preventDefault();
+    }
+  });
+
+  $('input').on('keydown', function() {
+    if($('.ladda-button').attr('disabled')){
+      Ladda.stopAll();
+      $('.ladda-button').attr('disabled', false);
+    }
+  });
+
+  $(document).on('click', '.js--tour-requirements', function(){
+    text = "<div class='modal-requirements'><p>Tour/Activity descriptions should summarize key details, including highlights of what the traveler will see and experience, language options, an example of the timeline, what is and not included, as well as transportation options, if necessary</p><p>Video Description highly recommended</p><p>Minimum 4 photos</p></div>"
+
+    swal({   title: "Tour Profile Requirements",   text: text,   html: true });
+  });

@@ -1,0 +1,40 @@
+- content_for(:title, "Founders of TourMega")
+
+
+#founders-bio.white-bg
+  .row
+    .small-12.content.shorter
+      %h3 Our team
+      .founder-text
+        .panel.white-bg
+          .media
+            %figure.media-photo.media-round.pull-left
+              %img{:alt => "Quynh Pham", :height => "150", :src => "#{asset_url('founder_quynhpham.jpg')}", :width => "150"}
+            .media-body
+              %h2.h3
+                Quynh Pham
+                %br
+                  %small CEO &amp; Co-Founder
+              %p
+                Quynh is a serial entrepreneur and Founder of TourMega. She leads the company’s vision and mission, develops and manages all systems and IT developments. Quynh earned a Computer Science degree at Penn State University with top honors.  She has lead several projects at IBM and financial institutions.
+
+              %p Born through the love for travel, eye for adventure and commitment to entrepreneurship, Quynh’s dream is to help travelers plan their trip with ease and have the best experiences on their trips. She has lived and traveled to many adventurous places and made meaningful cross cultural friendships.  She has hiked a volcanic, snow mountain, or watched the stars under the largest observatory in Chile and jumped off a mountain in Columbia. Her favorite travel destinations include Chile, Greece, Japan and Tibet.
+        .panel.white-bg
+          .media
+            %figure.media-photo.media-round.pull-left
+              %img{:alt => "Eric Espino", :height => "150", :src => "#{asset_url('eric_founder.jpg')}", :width => "150"}
+            .media-body
+              %h2.h3
+                Eric Espino
+                %br
+                  %small COO &amp; Co-Founder
+              %p Eric is an avid traveler with a passion for learning by experiencing. He loves meeting new people, seeing new places, and sharing his experiences with others.
+
+              %p Eric is responsible for driving the company's strategy and growth as it positions itself to be the go-to site for travelers seeking tours and activities around the world. Eric holds a Master in City Planning from MIT and a B.S. in Public Policy from USC. His
+
+              %p His favorite travel destinations include Mexico City, Saigon, and Cairo and his favorite activities include running, fishing, and eating street food.
+
+:javascript
+  $(function(){
+    $('.founders-path>a').addClass('current');
+  });

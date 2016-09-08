@@ -1,0 +1,34 @@
+swal({
+  title: "Verification",
+  text: "Please enter the verification code you get from SMS",
+  type: 'input',
+  showCancelButton: true,
+  closeOnConfirm: false,
+  showLoaderOnConfirm: true,
+  animation: 'slide-from-top',
+  inputPlaceholder: 'Verification code in digits'
+}, function(inputValue) {
+    if (inputValue === false)
+      return false
+    if (inputValue.trim() === "") {
+      swal.showInputError('You need to enter your code in digits');
+      return false;
+    }
+    $.ajax({
+      type: "POST",
+      url: "/manage/profile/twilio_verify",
+      data: { verification_code: inputValue },
+      dataType: 'json'
+    }).done(function(data, status) {
+      if (data['success']) {
+        swal("Verified successfully!");
+        $('#phone-number-verification').html("<%=j render 'users/verifications/phone_number' %>");
+      }
+      else
+        swal("Verified failed. Please try again!");
+    }).fail(function() {
+      alert("Failed to verify by phone number.");
+    });
+});
+
+Ladda.stopAll();

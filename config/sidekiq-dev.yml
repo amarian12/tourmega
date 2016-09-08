@@ -1,0 +1,8 @@
+---
+:concurrency: 2
+:queues:
+  - [default, 20]
+  - [mailer, 20]
+  - [mailers, 20]
+  - [elasticsearch, 10]
+:daemon: false

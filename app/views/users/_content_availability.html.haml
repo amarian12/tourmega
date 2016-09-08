@@ -1,0 +1,16 @@
+.row
+  .small-12.columns
+    = render 'profile_navbar'
+
+#profile
+  .row
+    .small-12.medium-7.columns
+      %h4.manage-header Availability
+      .space-top
+
+:javascript
+  $(function(){
+    $('.content-column').removeClass('free-meals');
+    $('li.availability>a').addClass('current');
+    $('li.profile>a').addClass('current');
+  });

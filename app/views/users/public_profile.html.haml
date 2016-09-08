@@ -1,0 +1,85 @@
+- content_for(:title, "#{@user.name} on TourMega")
+
+.profile_public
+  #wrapper
+    #bg
+    #main.row
+      %header#header
+        .row
+          .small-12.medium-offset-1.medium-3.columns
+            %img.avatar.current-user-avatar.avatar_public{:src => @user.avatar_url}
+          .small-12.medium-5.columns
+            %h1{style: "white-space: nowrap;"}= "#{@user.first_name} #{@user.last_name.first}."
+            %a= [@user.try(:job_title), @user.try(:primary_address).try(:address)].compact.join(' • ')
+            %nav
+              %ul
+                - Verification::SOCIAL_SOURCES.each do |src|
+                  %li{style: "top:-120px;"}
+                    - if @user.send("#{src}_verified?")
+                      %a.icon.fa.fa-check{:href => "#"}
+                    %a.icon-link.round.fill{:href => "#", class: "#{src}"}
+                      %i.icon.fa{class: "fa-#{src}"}
+                %li{style: "top:-120px;"}
+                  %a.icon.fa.fa-check{:href => "#"}
+                  %a.icon-link.round.fill{:href => "#", class: "envelope"}
+                    %i.icon.fa{class: "fa-envelope"}
+                %li{style: "top:-120px;"}
+                  - if @user.send("phone_number_verified?")
+                    %a.icon.fa.fa-check{:href => "#"}
+                  %a.icon-link.round.fill{:href => "#", class: "phone"}
+                    %i.icon.fa{class: "fa-phone"}
+        .row
+          .small-12
+            - if @user.hobbies.present?
+              %p= "I love #{@user.hobbies}"
+            - if @user.biography.present?
+              %p= @user.biography.html_safe
+            - if @user.video_presentation?
+              %p
+                %video{:width => 320, :height => 240, :controls => true}
+                  %source{:src => "#{@user.video_presentation.url}", :type => 'video/webm; codecs="vp8, vorbis"'}
+                  %source{:src => "#{@user.video_presentation.url}", :type => 'video/mp4; codecs="vp8, vorbis"'}
+                  %source{:src => "#{@user.video_presentation.url}", :type => 'video/ogg; codecs="vp8, vorbis"'}
+    - if @tours.present?
+      #user_tours.row
+        #tours
+          .row
+            .small-12.medium-4.columns
+              #tour_description
+                %h1#tour_name= @tours.first.name
+                %br
+                %p.tour_description
+                  = @tours.first.try(:description).try(:html_safe)
+            .small-12.medium-8.columns
+              .listings-container
+                - @tours.each_slice(2) do |tours|
+                  .row
+                    - tours.each do |tour|
+                      .small-6.medium-6.columns.image_column{data: {description: tour.try(:description).try(:html_safe), name: tour.name }}
+                        .item
+                          .panel-image.listing-img
+                            .media-photo
+                              .flexslider
+                                %ul.slides
+                                  - tour.images.each do |image|
+                                    %li
+                                      %a{:href => "#{tour_path(tour)}"}
+                                        %img{:src => "#{image.url}"}/
+                            %a.panel-overlay-bottom-left.panel-overlay-listing-price{:href => "#"}
+                              .price-container
+                                %sup $
+                                %span.price-amount= tour.price.round
+                              %span.icon-instant-book.glyphicon.glyphicon-flash
+
+
+:javascript
+  $(function(){
+    $('body').removeClass().addClass('manage').attr('style','');
+    $('#header').addClass('solid');
+
+    $('.image_column').hover(function(){
+      $('.tour_description').html($(this).data('description'));
+      $('#tour_name').html($(this).data('name'));
+    })
+
+  });

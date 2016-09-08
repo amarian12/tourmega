@@ -1,0 +1,20 @@
+.community-wrapper.container-fluid
+  .space-8.text-center
+    %h2 Our Featured Tours
+  %ul.row.community-container.list-unstyled
+    - @featured_tours.each do |tour|
+      %li.col-md-3.col-sm-6
+        .community-card.community-card-creating
+          .panel
+            %a.community-card-link.panel-image.media-photo.media-link.text-center{:href => "#{tour_path(tour)}"}
+              .media-cover.media-cover-dark.background-cover
+                %img{:src => "#{tour.images.last.url}"}/
+              .community-card-header
+                .community-card-header-label
+                  %strong.text-contrast
+                    = tour.categories.first.name
+              .row.row-table.row-full-height.text-contrast
+                .col-sm-10.col-center.col-bottom
+                  .h3
+                    %strong
+                      = tour.name

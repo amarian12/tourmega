@@ -1,0 +1,323 @@
+en:
+  hello: "Hello world"
+  active_admin:
+    powered_by: "TourMega © 2016. All Rights Reserved with ActiveAdmin"
+  date:
+    datepicker:
+      default: "mm/dd/yyyy"
+      long: "MM dd, yyyy"
+    formats:
+      default: "%m/%d/%Y"
+      long: ! "%B %d %Y"
+  record_not_found: "Could not find the record"
+  record_not_unique: "The record is not unique"
+  unauthorized: 'You are not authorized to access this page.'
+  controllers:
+    profiles:
+      become_guide:
+        flash:
+          notice: 'You successfully register to become a host. Going to make a experience with love with us'
+  user:
+    gender:
+      male: Male
+      female: Female
+  cuisines:
+    header: "Discover the local cuisine"
+    para: "Here are some of the best local-cooked dishes that you don't typically find in restaurants. Join our tours below with whom you can share these authentic local foods."
+  reservations:
+    successfully: 'Your reservation is successfully registered'
+  megatours:
+    header: "Join our TourMega lovers community"
+    waiting_for_approved: 'Tour is in approving process. We will contact you soon.'
+    create_successfully: 'Tour was successfully registered. We are going to contact you soon'
+    create_failed: 'There is an unexpected error.'
+    destroy_successfully: 'Tour was successfully removed.'
+    destroy_failed: 'There is an unexpected error.'
+    update_successfully: 'Tour was successfully updated.'
+    update_failed: 'There is an unexpected error.'
+  tour:
+    not_found: 'This tour is no longer exists. Please take a look and message us if possible'
+  countries:
+    photo_bg: "http://www.vietnamphotoadventures.com/wp-content/gallery/vpa-optimized/Hoi-An-2396.jpg"
+    header: An authentic experience adventrue awaits
+    introduction: 'Travelling all over the world with TourMega'
+  cities:
+    photo_bg: "https://d26oxw2p26xsun.cloudfront.net/assets/hero/countries-header-26bc4904d05ff553c58e5ca87b087346.jpg"
+    header: An authentic culinary adventrue awaits
+    introduction: 'Travelling all over the world with TourMega'
+  user:
+    session:
+      background: "http://www.vietnamphotoadventures.com/wp-content/gallery/vpa-optimized/North-Vietnam-7463.jpg"
+    registration:
+      background: "http://www.vietnamphotoadventures.com/wp-content/gallery/vpa-optimized/North-Vietnam-7463.jpg"
+    not_found: 'This user is no longer exists'
+  search:
+    click_pin: Click on a pin to view more
+    view_more: "From the detailed view, click to go to the host profile, see their reviews and book an experience"
+    location: "Destinations"
+    date: Dates
+    tour_types:
+      artsy: "Arts & Culture"
+      cruises: "Cruises"
+      food_and_drink: "Food and Drink"
+      landmarks: "Landmarks"
+      night_activities: "Night Activities"
+      outdoor_and_nature: "Outdoor & Nature"
+      music_and_dance: "Music and Dance"
+      health_and_fitness: "Health and Fitness"
+      sports_and_adventure: "Sports and Adventure"
+      unusual: "Unusual"
+  become_guide:
+    background_image: "http://www.vietnamphotoadventures.com/wp-content/gallery/vpa-optimized/Hoi-An-2396.jpg"
+    header: 'Join our TourMega lovers community'
+    introduction: 'A well curated tour can be a life changing experience for a traveler. Sound like something you can provide? If so, sign up for TourMega today and start showing the world what you got.'
+    application:
+      header: 'Application Process'
+      steps:
+        0: Sign up and create a TourMega profile
+        1: Submit your tour online
+        2: Wait for approval of tour and receive individual feedback from TourMega staff
+        3: Update calendar and availability
+        4: Accept or reject to customer's booking requests within 24 hours
+        5: Provide travelers with a memorable experience
+        6: Leave reviews for the travelers
+      picture: '/assets/BecomeOurGuide.jpg'
+    trust_and_safety: "We want you to feel 100% comfortable when guiding. This is why we have made sure that every TourMega booking is covered by our guide guarantee that covers you should any problems arise. All of our guides are pre-screened, recommended and reviewed by the TourMega community. Additionally, we communicate as much information about our guests as possible and allow you to communicate with them directly so that you never have to accept a booking without feeling absolutely comfortable about it."
+    guide_feedback: '"It was a pleasure to guide people from all over the world. We had a wonderful interaction and sharing of experiences with our guests. It was gratifying to know that they enjoyed the meal so much. We did not want our guests to leave and neither did they. We look forward to guide for TourMega again."'
+    guide_photo_bg: 'http://www.vietnamphotoadventures.com/wp-content/gallery/vpa-optimized/Phu-Loc-2863.jpg'
+  partner:
+    background_image: "http://www.vietnamphotoadventures.com/wp-content/gallery/vpa-optimized/Hoi-An-2396.jpg"
+    header: ''
+    introduction: 'Partner and grow with us'
+    para1:
+      header: 'Becoming our supply partner'
+      introduction: 'Whether you are a tour operator, travel agency or a travel aggregator, we would love to include your tours on our site and help you get more exposure and sell your products.  '
+    para2:
+      header: 'Becoming out distribution partner'
+      introduction: 'As a travel aggregator and search engine, we features hundreds of thousands of tours from many partners.  distribution partner.  Earn extra revenue by helping us distribute our products on your platform.'
+    application:
+      header: 'Contact us for more information'
+      picture: '/assets/Partner1.jpg'
+    trust_and_safety: "We want you to feel 100% comfortable when guiding. This is why we have made sure that every TourMega booking is covered by our guide guarantee that covers you should any problems arise. All of our guides are pre-screened, recommended and reviewed by the TourMega community. Additionally, we communicate as much information about our guests as possible and allow you to communicate with them directly so that you never have to accept a booking without feeling absolutely comfortable about it."
+    guide_feedback: '"It was a pleasure to guide people from all over the world. We had a wonderful interaction and sharing of experiences with our guests. It was gratifying to know that they enjoyed the meal so much. We did not want our guests to leave and neither did they. We look forward to guide for TourMega again."'
+    guide_photo_bg: 'http://www.vietnamphotoadventures.com/wp-content/gallery/vpa-optimized/Phu-Loc-2863.jpg'
+  home:
+    contact_us: 'Bump in the road? We are here to help'
+    contact_us_bg: 'http://www.vietnamphotoadventures.com/wp-content/gallery/vpa-optimized/Tee-time.jpg'
+    help_image: "https://d26oxw2p26xsun.cloudfront.net/assets/icons/concierge-icon-grey-8e5cb4d0efff2a23ed233238e73fc281.png"
+    larger_text: Search for Tours and Activities Around the World
+    hide_for_small_text: and have the best experiences for your travels
+    not_found_location: DON'T SEE YOUR DESTINATION?
+    other_locations: We have other experiences available.
+    testimonial: What people say
+    testimonials:
+      0: "Ryan|I spent about three weeks traveling through SE Asia and can easily say that my Traveling Spoon experience was the best part of my trip. The fish we made was the best thing I ate on the entire trip."
+      1: "Alice Waters - chef and advisor|TourMega is a brilliant idea. The world needs it."
+      2: "Natalie|Our group traveled India for over a week, and this was by far my favorite experience. Experiencing the life of a local - the house, the food, the family - was priceless."
+    introduction:
+      header: "Local guide for an authentic taste of life"
+      content: "<p>We are here to connect world travellers with local tour guides for a real, local experience. We are a marketplace where you can discover, book and offer tours, activities and unique experiences anywhere in the world.</p><p>We offer high quality local experiences reviewed by community, each with trustworthy and reliable.</p>"
+      step:
+        0: "https://d1oh9y2nmj4y5b.cloudfront.net/uploads/cover_photo/filename/7/small_japan.jpg|Home cooks|Experience the joy of a homemade meal (and eat it the way the locals do) over conversation about food and culture"
+    how_it_works: How it works
+    howitworks:
+      step:
+        0: "Search for tours around the world"
+        1: "Select your adventure from approved tour operators and guides"
+        2: "Book safely and securely on our platform"
+        3: "Get ready to have the most memorial experiences of your life"
+        4: "Leave feedback to show your gratitude and provide helpful feedback"
+    intro_locations: Explore The World
+    press:
+      main:
+        alt: Forbes text
+        src: https://d26oxw2p26xsun.cloudfront.net/assets/media/forbes-text-852d946c100c5c6caae67afb4b194321.png
+      sub:
+        media:
+          0: https://d26oxw2p26xsun.cloudfront.net/assets/media/ngtraveler-79de4411b71a1f85de7ecbb547e714c8.png
+          1: https://d26oxw2p26xsun.cloudfront.net/assets/media/cnn-3e0db110edb608f54de2a65f49294270.png
+          2: https://d26oxw2p26xsun.cloudfront.net/assets/media/travel-leisure-grey-cbab9a2fd0b5ace4a6633492541d0f22.png
+          3: https://d26oxw2p26xsun.cloudfront.net/assets/media/travelchannel-ae1845bda45629b521d11b222b18db90.png
+          4: https://d26oxw2p26xsun.cloudfront.net/assets/media/afar-1130c3add5545cb40cdf5a5dda275a90.png
+          5: https://d26oxw2p26xsun.cloudfront.net/assets/media/women20-de03b3fc5c4deaf052cf8f8d885e5eac.png
+    vet:
+      host:
+        header: Interested in hosting
+        para: Learn more about the process of becoming a host
+      safety:
+        header: 100% of our hosts are vetted
+        para: Safety and security is our top priority. Learn more
+      ambassador:
+        header: Call for Ambassadors
+        para: Learn more about becoming an ambassador
+    all_rights_reserved: TourMega © 2016. All Rights Reserved
+    blog: https://blog.tourmega.com
+    facebook: https://www.facebook.com/tourmega
+    twitter: https://www.twitter.com/tourmega
+    instagram: https://www.instagram.com/tourmega
+  input:
+    placeholder:
+      where_are_you_going: Where are you going?
+  countries:
+    brazil:
+      description: |
+        <p>
+          The Federal Republic of Brazil (Brazil) is home to approximately 204 million people which makes it the most populated country in Latin America and the second most populated in the Western Hemisphere, behind the United States. Brazil is also a very large country from a land area perspective with a land area just smaller than the US. Given its size, Brazil borders 10 different countries which is rather unique and reflects the scale and diversity of the country.
+        </p>
+
+        <p>
+          Whether you want to learn to make caipirinhas while overlooking the beach, dance samba with locals, or explore the Amazon alongside the many indigenous peoples that call it home, Brazil has got you covered.  It is a very large and vibrant country with so much to offer. Start planning your trip today and don’t hesitate to contact the guides or TourMega with questions.
+        </p>
+
+        <p>
+          Official Language: Portuguese / Currency: Real / Largest City: São Paulo / Main Sport: Futebol (soccer)
+        </p>
+
+    china:
+      description: |
+        <p>
+          The People’s Republic of China (China) is the world’s most populous country with approximately 1.38 billion people and the second largest in terms of land area, second only to neighboring Russia.
+        </p>
+
+        <p>
+          With its size and deep history China offers travelers tremendous opportunities to experience modern China while staying in one of its megacities or a much more rural and traditional way of life, especially in central and eastern china. Get out and experience the country and interact with the people and culture that will continue to shape the world for years to come.
+        </p>
+
+        <p>
+          Official Language: Mandarin / Currency: Renminbi (Yuan) / Largest City: Shanghai / Main Sports: Ping Pong and Basketball
+        </p>
+
+    costa-rica:
+      description: |
+        <p>
+          The Republic of Costa Rica (Costa Rica) is pretty much a tropical paradise. With two different bodies of water bordering the eastern and western portions of the country, it is quite possible for someone to watch the sunrise over the Caribbean Sea and watch it set over the Pacific Ocean, all in the same day.
+        </p>
+
+        <p>
+          But it’s not just beaches that makes Costa Rica a desirable location, the small Central American country provides visitors with access to lush rainforests and magnificent volcanoes. It’s biodiversity is considered to be among the richest in the world and the people among the most welcoming. With a population of only 4.8 million, it is small country with a lot to explore and a lot to offer every type of traveler.
+        </p>
+
+        <p>
+          Official Language: Spanish / Currency: Costa Rican Colon / Largest City: San Jose / Main Sport: Futbol (soccer)
+        </p>
+
+    egypt:
+      description: |
+        <p>
+          The Arab Republic of Egypt (Egypt) is arguably the oldest nation state with a deep history that spans millennia. Known by many as the “cradle of civilization,” ancient Egypt played a central role in developing modern writing, governance, and urban planning, among other things. Home to approximately 82 million, the country is largely desert and would not be habitable if not for the water provided by the storied Nile River.
+        </p>
+
+        <p>
+          Millions of travelers go to Egypt to walk where pharaohs walked, see their remains, and take in some of the oldest structures built by modern man. Yet, just when you think you’ve seen it all, a new layer is peeled back, ancient story retold, or famous recipe reworked to adapt to modern tastes. That is the story of Egypt, constantly changing yet remaining what it is at the same time.
+        </p>
+
+        <p>
+          Right now is an especially unique time to visit Egypt. While issues throughout North Africa and the Middle East have caused tourism to decline, the sites are there for your to explore and the people ever welcoming and eager to show you what real Egyptian life was and is. Search through TourMega for verified guides and activities to help you experience Egypt and all its wonders.
+        </p>
+
+        <p>
+          Official Language: Arabic / Currency: Egyptian Pound / Largest City: Cairo / Main Sport: Football (soccer)
+        </p>
+
+    india:
+      description: |
+        <p>
+          The Republic of India (India) has witnessed significant growth over the past 30 to 40 years, much of this driven by a young and very large population (approximately 1.2 billion people). Given that India is roughly a third the size of the US in terms of land area yet has a population over three times its size, India is an extremely dense country which offers travelers a truly unique and unforgettable experience.
+        </p>
+
+        <p>
+          Despite the population density, India is a very large country with many less populated regions where one can take in a slower pace of life or see wildlife in their natural habitats if that is what you’re looking for. Don’t let the size and congestion intimidate you, there is so much for you to explore in India. TourMega guides can be especially helpful for those looking to navigate this dense, complex, and wonderful country.
+        </p>
+
+
+        <p>
+          Official Languages: Hindi, English / Currency: Rupee / Largest City: Mumbai (Bombay) / Main Sports: Cricket
+        </p>
+    italy:
+      description: |
+        <p>
+          The Italian Republic is home to 61 million people spread across the boot shaped country and islands. One does not have to look far to see the influence ancient or modern Italy has had on our world today and so being able to be a part of the land that was and is the source for that influence is truly an amazing experience.
+        </p>
+
+        <p>
+          While seeing the sites as they stand today is truly a treat, it’s also the people that make the Italian experience what it is. Exuding a passion for life, the streets of Rome or Florence or Milan are filled with an energy that one has to experience first hand to truly appreciate.
+        </p>
+
+        <p>
+          We could write countless paragraphs more on the country, but why? Get out there and experience the glory of ancient and modern Italy.
+        </p>
+
+        <p>
+          Official Language: Italian / Currency: Euro / Largest City: Rome / Main Sport: Calcio (soccer)
+        </p>
+
+    kenya:
+      description: |
+        <p>
+          The Republic of Kenya (Kenya) is an equatorial country with a population of approximately 45 million. Located in east central Africa, Kenya encompass part of the Great Rift Valley and borders the massive Lake Victoria in the southwest and has direct access to the Indian Ocean in the southeast.
+        </p>
+
+        <p>
+          Kenya has a notable system of national parks which offers visitors a chance to see a range of impressive wildlife (we’re talking the Big Five here people) and terrain across the country's diverse geography. Coffee is the major export for Kenya so make sure to get some locally sourced beans to enjoy or take home as a gift.
+        </p>
+
+        <p>
+          Official Language: Swahili and English / Currency: Kenyan Shilling / Largest City: Nairobi / Main Sport: Football (soccer)
+        </p>
+
+    mexico:
+      description: |
+        <p>
+          Officially named Estados Unidos Mexicanos (United Mexican States), Mexico is made up of 31 states and one federal district and home to 121 million inhabitants in a land area roughly three times the size of Texas.
+        </p>
+
+        <p>
+          Given its size, which is often underappreciated by travelers, Mexico is able to maintain an immensely diverse environment. Whether it be cultural, racial, geographic, climatic, or biodiversity, the country offers travelers options abound to see, taste, and experience many different types of Mexico.
+        </p>
+
+        <p>
+          From dusty desert towns, pristine beaches, exotic rainforests, or the dense concrete jungle of Mexico City, the country is sure to amaze and excite the senses. See below for some of the diverse and exciting tours and activities that can be booked through TourMega and have wonderful time in Mexico.
+        </p>
+
+        <p>
+          Official Language: Spanish / Currency: Peso / Largest City: Mexico City / Main Sports: Futbol (soccer) and Boxing
+        </p>
+    peru:
+      description: |
+        <p>
+          Official Language: Spanish, Quechua, Aymara / Currency: Peruvian Nuevo Sol / Largest City: Lima / Main Sport: Futbol (Soccer)
+        </p>
+    portugal:
+      description: |
+
+    united-states:
+      description: |
+        <p>
+          The United States of America, home to approximately 319 million people in 50 states, is a very large country where one can experience any number of extremes. From the frigid tundra in Alaska to the extreme heat in the California deserts or the Metropolis that is New York City to the small farm towns in the central plains, travelers have endless opportunities to explore and experience, well virtually anything.
+        </p>
+
+        <p>
+          TourMega is a perfect place to get inspired and book a unique activity to make any trip a memorable one. See below for some featured tours and activities through the United States.
+        </p>
+
+        <p>
+          Official Language: English / Currency: US Dollar / Largest City: New York / Main Sport(s): American Football, Basketball, Baseball
+        </p>
+    vietnam:
+      description: |
+        <p>
+          The Socialist Republic of Vietnam (Vietnam) is home to approximately 94 million people and located on the eastern border of the Indochina peninsula.
+        </p>
+
+        <p>
+          After years of rebuilding from the effects of the Vietnam war, the country is at an exciting crossroads as it makes its mark in the globalize world. The country’s citizens are young with approximately 41% of the populous under the age of 24 and one cannot go a few minutes in any of the major Cities without feeling the youthful energy that pushes this country forward.
+        </p>
+
+        <p>
+          Vietnam is becoming the go to place to see for travelers making their way to Southeast Asia. It has wonderful beaches, historical sites, natural beauty, and a lively urban core in Saigon that makes it a truly special place to visit. What are you waiting for, get on the next flight to Hanoi, Saigon, or Da Nang and see what everyone is talking about.
+        </p>
+
+        <p>
+          Official Language: Vietnamese / Currency: Vietnamese Dong / Largest City: Saigon (Ho Chi Minh City) / Main Sport: đá cầu (jianzi or kick volleyball)
+        </p>
+

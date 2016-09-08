@@ -1,0 +1,15 @@
+- Verification::SOCIAL_SOURCES.each do |source|
+  %li.space-4{id: "#{source}-verification"}
+    %h5= source.titleize
+    .row
+      .col-xs-12.col-sm-7
+        %p= "Connect your TourMega account to your #{source.titleize} account for simplicity and ease."
+      .col-xs-12.col-sm-5
+        .text-center.green-succ
+          - if current_user.send("#{source}_verified?")
+            .item
+              %i.icon.fa.fa-check-circle-o
+              .item-body
+                %span= "Connected with " + current_user.send("#{source}_verification").account
+          - else
+            = link_to 'Connect', omniauth_authorize_path(:user, source, only_verified: true, referrer_column: action_name), method: :get, class: 'button expand ladda-button no-loading', 'data-style' => 'expand-right', 'data-color' => 'mint'
